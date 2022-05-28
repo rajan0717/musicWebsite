@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ecommerce Website</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="images/logo.png" alt="website logo">
+            <ul>
+                <li><a href="#" class="menu-item">HOME</a></li>
+                <li><a href="#" class="menu-item">ABOUT</a></li>
+                <li><a href="#" class="menu-item">FORUMS</a></li>
+                <li><a href="#" class="menu-item">SERVICES</a></li>
+                <li><a href="#" class="menu-item">PRODUCTS</a></li>
+                <li><a href="#" class="menu-item">SOTRES</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="col-01">
+                <h1>The<br> Real<br> Sound</h1>
+            </div>
+            <div class="col-02">
+                <span>Play the music</span>
+                <img src="images/play.png" alt="play button" class="play-button" id="icon">
+            </div>
+        </div>
+        
+        <audio id="mySong">
+            <source src="C:\Users\Rajan Kumar\Downloads\WhatsApp Audio 2022-05-28 at 1.53.29 PM.aac" type="audio/aac">
+        </audio>
+    
+    </div>
+    <script>
+        var icon = document.getElementById("icon");
+        var mySong = document.getElementById("mySong");
+
+        icon.addEventListener('click', () => {
+            if(mySong.paused) {
+                mySong.play();
+                icon.src = "images/play.png";
+            } else {
+                mySong.pause();
+                icon.src = "images/pause.png"
+            }
+        });
+    </script>
+
+
+</body>
+</html>
